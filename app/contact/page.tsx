@@ -50,56 +50,95 @@ export default function ContactPage() {
     return (
       <main className="min-h-screen bg-slate-50 text-slate-900">
          {/* Navigation */}
-  <header className="border-b border-slate-200 bg-white">
-    <div className="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
-      
-      {/* Logo */}
-      <Link
-        href="/"
-        className="text-2xl font-bold tracking-tight text-blue-950"
-      >
-        Quinluma
+         <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+
+    {/* Logo */}
+    <Link href="/" className="flex items-center gap-3">
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-lg font-bold text-white">
+        Q
+      </div>
+
+      <div>
+        <h1 className="text-xl font-bold tracking-tight text-blue-900">
+          Quinluma
+        </h1>
+
+        <p className="hidden text-xs text-slate-500 sm:block">
+          Making technology easy to understand.
+        </p>
+      </div>
+    </Link>
+
+    {/* Desktop Navbar */}
+    <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+      <Link href="/" className="text-slate-600 hover:text-blue-700">
+        Home
       </Link>
 
-      {/* Navigation Links */}
-      <nav className="flex flex-wrap items-center gap-x-6 gap-y-3 text-sm font-medium">
-        <Link
-          href="/"
-          className="text-slate-600 transition hover:text-blue-700"
-        >
-          Home
-        </Link>
+      <Link href="/services" className="text-slate-600 hover:text-blue-700">
+        Services
+      </Link>
 
-        <Link
-          href="/services"
-          className="text-slate-600 transition hover:text-blue-700"
-        >
-          Services
-        </Link>
+      <Link href="/about" className="text-slate-600 hover:text-blue-700">
+        About
+      </Link>
 
-        <Link
-          href="/about"
-          className="text-slate-600 transition hover:text-blue-700"
-        >
-          About
-        </Link>
+      <Link href="/contact" className="font-semibold text-blue-700 hover:text-blue-800">
+        Contact
+      </Link>
+    </nav>
 
-        <Link
-          href="/contact"
-          className="font-semibold text-blue-700"
-        >
-          Contact
-        </Link>
+    {/* Get Help + Mobile Menu */}
+    <div className="flex items-center gap-3">
+      <Link
+        href="/contact"
+        className="rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+      >
+        Get Help
+      </Link>
 
-        <Link
-          href="/contact"
-          className="rounded-full bg-blue-700 px-5 py-2.5 font-semibold text-white transition hover:bg-blue-800"
-        >
-          Get Help
-        </Link>
-      </nav>
+      {/* Mobile Menu */}
+      <details className="relative md:hidden">
+        <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-slate-200 text-xl text-slate-700">
+          ☰
+        </summary>
+
+        <div className="absolute right-0 top-12 z-[999] w-56 rounded-2xl border border-slate-200 bg-white p-3 shadow-xl">
+          <nav className="flex flex-col">
+            <Link
+              href="/"
+              className="rounded-lg px-4 py-3 text-slate-700 hover:bg-slate-50"
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/services"
+              className="rounded-lg px-4 py-3 text-slate-700 hover:bg-slate-50"
+            >
+              Services
+            </Link>
+
+            <Link
+              href="/about"
+              className="rounded-lg px-4 py-3 text-slate-700 hover:bg-slate-50"
+            >
+              About
+            </Link>
+
+            <Link
+              href="/contact"
+              className="rounded-lg bg-blue-50 px-4 py-3 font-semibold text-blue-700"
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </details>
     </div>
-  </header>
+  </div>
+</header>
         <section className="bg-blue-950 px-6 py-20 text-white">
           <div className="mx-auto max-w-5xl">
             <p className="font-semibold text-yellow-400">CONTACT QUINLUMA</p>

@@ -61,98 +61,95 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       {/* Navigation */}
-      <header className="border-b border-slate-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
-          <a href="#" className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-lg font-bold text-white">
-              Q
-            </div>
+      <header className="sticky top-0 z-50 border-b border-slate-200 bg-white">
+  <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
 
-            <div>
-              <h1 className="text-xl font-bold tracking-tight text-blue-900">
-                Quinluma
-              </h1>
-              <p className="text-xs text-slate-500">
-                Making technology easy to understand.
-              </p>
-            </div>
-          </a>
+    {/* Logo */}
+    <Link href="/" className="flex items-center gap-3">
+      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-700 text-lg font-bold text-white">
+        Q
+      </div>
 
-          <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
-  <Link
-    href="/"
-    className="font-semibold text-blue-700"
-  >
-    Home
-  </Link>
+      <div>
+        <h1 className="text-xl font-bold tracking-tight text-blue-900">
+          Quinluma
+        </h1>
 
-  <Link
-    href="/services"
-    className="text-slate-600 transition hover:text-blue-700"
-  >
-    Services
-  </Link>
+        <p className="hidden text-xs text-slate-500 sm:block">
+          Making technology easy to understand.
+        </p>
+      </div>
+    </Link>
 
-  <Link
-    href="/about"
-    className="text-slate-600 transition hover:text-blue-700"
-  >
-    About
-  </Link>
-
-  <Link
-    href="/contact"
-    className="text-slate-600 transition hover:text-blue-700"
-  >
-    Contact
-  </Link>
-</nav>
-
-<Link
-  href="/contact"
-  className="rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-800"
->
-  Get Help
-</Link>
-        </div>
-        {menuOpen && (
-  <div className="border-t border-slate-200 bg-white px-6 py-5 md:hidden">
-    <nav className="flex flex-col gap-4 text-sm font-medium">
-      <Link
-        href="/"
-        onClick={() => setMenuOpen(false)}
-        className="text-slate-700 hover:text-blue-700"
-      >
+    {/* Desktop Navbar */}
+    <nav className="hidden items-center gap-8 text-sm font-medium md:flex">
+      <Link href="/" className="font-semibold text-blue-700 hover:text-blue-800">
         Home
       </Link>
 
-      <Link
-        href="/services"
-        onClick={() => setMenuOpen(false)}
-        className="text-slate-700 hover:text-blue-700"
-      >
+      <Link href="/services" className="text-slate-600 hover:text-blue-700">
         Services
       </Link>
 
-      <Link
-        href="/about"
-        onClick={() => setMenuOpen(false)}
-        className="text-slate-700 hover:text-blue-700"
-      >
+      <Link href="/about" className="text-slate-600 hover:text-blue-700">
         About
       </Link>
 
-      <Link
-        href="/contact"
-        onClick={() => setMenuOpen(false)}
-        className="text-slate-700 hover:text-blue-700"
-      >
+      <Link href="/contact" className="text-slate-600 hover:text-blue-700">
         Contact
       </Link>
     </nav>
+
+    {/* Get Help + Mobile Menu */}
+    <div className="flex items-center gap-3">
+      <Link
+        href="/contact"
+        className="rounded-full bg-blue-700 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-800"
+      >
+        Get Help
+      </Link>
+
+      {/* Native mobile dropdown */}
+      <details className="relative md:hidden">
+        <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-slate-200 text-xl text-slate-700">
+          
+        </summary>
+
+        <div className="absolute right-0 top-12 z-[999] w-56 rounded-2xl border border-slate-200 bg-white p-3 shadow-xl">
+          <nav className="flex flex-col">
+            <Link
+              href="/"
+              className="rounded-lg px-4 py-3 font-semibold text-blue-700 hover:bg-blue-50"
+            >
+              Home
+            </Link>
+
+            <Link
+              href="/services"
+              className="rounded-lg px-4 py-3 text-slate-700 hover:bg-slate-50"
+            >
+              Services
+            </Link>
+
+            <Link
+              href="/about"
+              className="rounded-lg px-4 py-3 text-slate-700 hover:bg-slate-50"
+            >
+              About
+            </Link>
+
+            <Link
+              href="/contact"
+              className="rounded-lg px-4 py-3 text-slate-700 hover:bg-slate-50"
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
+      </details>
+    </div>
   </div>
-)}
-      </header>
+</header>
 {/* Hero */}
 <section className="overflow-hidden bg-blue-50">
   <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:px-8 lg:py-24">
@@ -348,6 +345,39 @@ export default function Home() {
   </div>
 </section>
 
+{/* Personal Help */}
+<section className="bg-white px-6 py-20">
+  <div className="mx-auto max-w-5xl rounded-3xl border border-blue-100 bg-blue-50 p-8 text-center shadow-sm sm:p-12">
+    <p className="font-semibold text-blue-600">
+      NEED PERSONAL HELP?
+    </p>
+
+    <h2 className="mt-3 text-3xl font-bold tracking-tight text-blue-950 sm:text-4xl">
+      Don't struggle with technology alone.
+    </h2>
+
+    <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
+      Get personalized help with everyday technology problems,
+      digital skills, online safety, and other technology challenges.
+    </p>
+
+    <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+      <Link
+        href="/contact"
+        className="rounded-full bg-blue-600 px-7 py-3.5 font-bold text-white transition hover:bg-blue-700"
+      >
+        Get Personal Help →
+      </Link>
+
+      <Link
+        href="/services"
+        className="rounded-full border-2 border-blue-600 bg-white px-7 py-3.5 font-bold text-blue-700 transition hover:bg-blue-50"
+      >
+        View Services
+      </Link>
+    </div>
+  </div>
+</section>
 
       {/* Mission */}
       <section className="bg-slate-50 px-6 py-20">
