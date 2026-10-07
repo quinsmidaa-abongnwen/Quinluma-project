@@ -112,7 +112,7 @@ export default function Home() {
       {/* Native mobile dropdown */}
       <details className="relative md:hidden">
         <summary className="flex h-10 w-10 cursor-pointer list-none items-center justify-center rounded-lg border border-slate-200 text-xl text-slate-700">
-          
+          ☰
         </summary>
 
         <div className="absolute right-0 top-12 z-[999] w-56 rounded-2xl border border-slate-200 bg-white p-3 shadow-xl">
