@@ -146,7 +146,7 @@ export default function ServicesPage() {
               <div className="mt-5 border-t border-blue-100 pt-4">
                 <p className="text-sm text-slate-500">Starting from</p>
                 <p className="mt-1 text-2xl font-bold text-blue-700">
-                  1,000 FCFA
+                500 FCFA
                 </p>
                 <p className="text-sm text-slate-500">Per session</p>
               </div>
@@ -171,7 +171,7 @@ export default function ServicesPage() {
               <div className="mt-5 border-t border-green-100 pt-4">
                 <p className="text-sm text-slate-500">Starting from</p>
                 <p className="mt-1 text-2xl font-bold text-green-700">
-                  1,500 FCFA
+                  1,000 FCFA
                 </p>
                 <p className="text-sm text-slate-500">Per lesson</p>
               </div>
@@ -196,7 +196,7 @@ export default function ServicesPage() {
               <div className="mt-5 border-t border-yellow-100 pt-4">
                 <p className="text-sm text-slate-500">Starting from</p>
                 <p className="mt-1 text-2xl font-bold text-yellow-700">
-                  1,000 FCFA
+                  500 FCFA
                 </p>
                 <p className="text-sm text-slate-500">Per session</p>
               </div>
