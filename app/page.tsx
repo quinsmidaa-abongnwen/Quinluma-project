@@ -240,7 +240,7 @@ export default function Home() {
         </p>
 
         <a
-          href="#"
+          href="/services"
           className="mt-6 inline-block font-semibold text-blue-600 hover:text-blue-800"
         >
           Explore learning →
@@ -266,7 +266,7 @@ export default function Home() {
         </p>
 
         <a
-          href="#"
+          href="/services"
           className="mt-6 inline-block font-semibold text-green-600 hover:text-green-800"
         >
           Find a solution →
@@ -292,7 +292,7 @@ export default function Home() {
         </p>
 
         <a
-          href="#"
+          href="/services"
           className="mt-6 inline-block font-semibold text-yellow-600 hover:text-yellow-800"
         >
           Learn about safety →
